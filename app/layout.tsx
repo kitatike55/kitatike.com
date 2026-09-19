@@ -3,19 +3,17 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://taiki-kitazawa-research.kitatike-naist.chatgpt.site'),
-  title: 'Taiki Kitazawa | Hardware Security Researcher',
+  title: 'Taiki Kitazawa | 北澤 太基',
   description:
-    'Research in electromagnetic information leakage, TEMPEST, side-channel analysis, EMC, and signal integrity.',
+    'Personal homepage of Taiki Kitazawa, Assistant Professor at Nara Institute of Science and Technology.',
   openGraph: {
-    title: 'Taiki Kitazawa',
-    description: 'Hardware Security · Electromagnetic Information Leakage',
-    images: ['/og.png'],
+    title: 'Taiki Kitazawa | 北澤 太基',
+    description: 'Assistant Professor at Nara Institute of Science and Technology',
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Taiki Kitazawa',
-    description: 'Hardware Security · Electromagnetic Information Leakage',
-    images: ['/og.png'],
+    card: 'summary',
+    title: 'Taiki Kitazawa | 北澤 太基',
+    description: 'Assistant Professor at Nara Institute of Science and Technology',
   },
 };
 

@@ -1,31 +1,9 @@
-import { ArrowUpRight, Mail } from 'lucide-react';
-
 const education = [
-  {
-    period: '2026 —',
-    school: 'Nara Institute of Science and Technology (NAIST)',
-    detail: 'Assistant Professor',
-  },
-  {
-    period: '2023 — 2026',
-    school: 'Nara Institute of Science and Technology (NAIST)',
-    detail: 'Ph.D. in Engineering, Information Security Engineering Laboratory',
-  },
-  {
-    period: '2024.06 — 2025.02',
-    school: 'KU Leuven University',
-    detail: 'International Scholar, ESAT / COSIC',
-  },
-  {
-    period: '2021 — 2023',
-    school: 'Nara Institute of Science and Technology (NAIST)',
-    detail: 'Master of Engineering in Information Science',
-  },
-  {
-    period: '2014 — 2021',
-    school: 'National Institute of Technology, Nagano College',
-    detail: 'Bachelor of Engineering in Electrical Engineering',
-  },
+  ['2026 —', 'Nara Institute of Science and Technology (NAIST)', 'Assistant Professor'],
+  ['2023 — 2026', 'Nara Institute of Science and Technology (NAIST)', 'Ph.D. in Engineering, Information Security Engineering Laboratory'],
+  ['2024.06 — 2025.02', 'KU Leuven University', 'International Scholar, ESAT / COSIC'],
+  ['2021 — 2023', 'Nara Institute of Science and Technology (NAIST)', 'Master of Engineering in Information Science'],
+  ['2014 — 2021', 'National Institute of Technology, Nagano College', 'Bachelor of Engineering in Electrical Engineering'],
 ];
 
 const research = [
@@ -55,9 +33,9 @@ const links = [
 
 export default function Home() {
   return (
-    <main>
-      <header className="site-header">
-        <a className="site-name" href="#top">Taiki Kitazawa</a>
+    <main className="container">
+      <header>
+        <a className="home-link" href="/">Taiki Kitazawa</a>
         <nav aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#research">Research</a>
@@ -66,107 +44,70 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="intro" id="top">
-        <div className="intro-title">
-          <p className="overline">Personal homepage</p>
-          <h1>Taiki Kitazawa</h1>
-          <p className="name-ja">北澤 太基 <span>Ph.D.</span></p>
-        </div>
-        <div className="intro-profile">
-          <p className="role">Assistant Professor</p>
+      <section className="profile" id="about">
+        <h1>Taiki Kitazawa</h1>
+        <p className="name-ja">北澤 太基, Ph.D.</p>
+        <div className="affiliation">
+          <p>Assistant Professor</p>
           <p>Nara Institute of Science and Technology (NAIST)</p>
           <p>Information Security Engineering Laboratory</p>
-          <a className="email" href="mailto:kitazawa.taiki.kq8@is.naist.jp">
-            <Mail aria-hidden="true" /> kitazawa.taiki.kq8@is.naist.jp
-          </a>
         </div>
+        <a href="mailto:kitazawa.taiki.kq8@is.naist.jp">kitazawa.taiki.kq8@is.naist.jp</a>
       </section>
 
-      <section className="section two-column" id="about">
-        <div className="section-label">
-          <span>01</span>
-          <h2>Education &amp;<br />Experience</h2>
-        </div>
-        <div className="timeline">
-          {education.map((item) => (
-            <article className="timeline-row" key={`${item.period}-${item.school}`}>
-              <p className="period">{item.period}</p>
+      <section>
+        <h2>Education &amp; Experience</h2>
+        <div className="rows">
+          {education.map(([period, school, detail]) => (
+            <div className="row" key={`${period}-${school}`}>
+              <span>{period}</span>
               <div>
-                <h3>{item.school}</h3>
-                <p>{item.detail}</p>
+                <p>{school}</p>
+                <small>{detail}</small>
               </div>
-            </article>
+            </div>
           ))}
         </div>
       </section>
 
-      <section className="section two-column" id="research">
-        <div className="section-label">
-          <span>02</span>
-          <h2>Research<br />Themes</h2>
+      <section id="research">
+        <h2>Research Themes</h2>
+        <ul>
+          {research.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Awards &amp; Scholarships</h2>
+        <h3>Awards</h3>
+        <p><a href="/publications#awards">View awards</a></p>
+        <h3>Scholarships</h3>
+        <div className="rows compact">
+          {scholarships.map(([year, title]) => (
+            <div className="row" key={title}>
+              <span>{year}</span>
+              <p>{title}</p>
+            </div>
+          ))}
         </div>
-        <ul className="research-list">
-          {research.map((item, index) => (
-            <li key={item}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              {item}
-            </li>
+      </section>
+
+      <section>
+        <h2>Publications</h2>
+        <p>Journal, International Conference, Domestic Workshop, Invited Lecture, Review Article, and Other.</p>
+        <p><a href="/publications">View publication list</a></p>
+      </section>
+
+      <section id="links">
+        <h2>Links</h2>
+        <ul className="links">
+          {links.map(([label, href]) => (
+            <li key={label}><a href={href} target="_blank" rel="noreferrer">{label}</a></li>
           ))}
         </ul>
       </section>
 
-      <section className="section two-column">
-        <div className="section-label">
-          <span>03</span>
-          <h2>Awards &amp;<br />Scholarships</h2>
-        </div>
-        <div>
-          <div className="subsection-heading">
-            <h3>Awards</h3>
-            <a href="/publications#awards">View awards <ArrowUpRight aria-hidden="true" /></a>
-          </div>
-          <div className="scholarship-block">
-            <h3>Scholarships</h3>
-            {scholarships.map(([year, title]) => (
-              <div className="compact-row" key={title}>
-                <span>{year}</span>
-                <p>{title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="publication-callout">
-        <div>
-          <p className="overline">Research output</p>
-          <h2>Publications</h2>
-        </div>
-        <p>
-          Journal · International Conference · Domestic Workshop · Invited Lecture · Review Article · Other
-        </p>
-        <a href="/publications">View publication list <ArrowUpRight aria-hidden="true" /></a>
-      </section>
-
-      <section className="section two-column" id="links">
-        <div className="section-label">
-          <span>04</span>
-          <h2>Links</h2>
-        </div>
-        <div className="link-grid">
-          {links.map(([label, href]) => (
-            <a href={href} key={label} target="_blank" rel="noreferrer">
-              {label}<ArrowUpRight aria-hidden="true" />
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <footer>
-        <p>Taiki Kitazawa</p>
-        <p>Nara Institute of Science and Technology</p>
-        <p>© {new Date().getFullYear()}</p>
-      </footer>
+      <footer>© {new Date().getFullYear()} Taiki Kitazawa</footer>
     </main>
   );
 }
