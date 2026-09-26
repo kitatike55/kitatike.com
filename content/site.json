@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Taiki Kitazawa | 北澤 太基",
+    "description": "Personal homepage of Taiki Kitazawa, Assistant Professor at Nara Institute of Science and Technology.",
+    "ogDescription": "Assistant Professor at Nara Institute of Science and Technology"
+  },
+  "profile": {
+    "name": "Taiki Kitazawa",
+    "nameJa": "北澤 太基, Ph.D.",
+    "position": "Assistant Professor",
+    "affiliations": [
+      "Nara Institute of Science and Technology (NAIST)",
+      "Information Security Engineering Laboratory"
+    ],
+    "email": "kitazawa.taiki.kq8@is.naist.jp"
+  },
+  "educationExperience": [
+    {
+      "period": "2014 — 2021",
+      "organization": "National Institute of Technology, Nagano College",
+      "detail": "Bachelor of Engineering in Electrical Engineering"
+    },
+    {
+      "period": "2021 — 2023",
+      "organization": "Nara Institute of Science and Technology (NAIST)",
+      "detail": "Master of Engineering in Information Science"
+    },
+    {
+      "period": "2023 — 2026",
+      "organization": "Nara Institute of Science and Technology (NAIST)",
+      "detail": "Ph.D. in Engineering, Information Security Engineering Laboratory"
+    },
+    {
+      "period": "2024.06 — 2025.02",
+      "organization": "KU Leuven University",
+      "detail": "International Scholar, ESAT / COSIC"
+    },
+    {
+      "period": "2026 —",
+      "organization": "Nara Institute of Science and Technology (NAIST)",
+      "detail": "Assistant Professor"
+    }
+  ],
+  "researchThemes": [
+    {
+      "name": "Hardware Security",
+      "topics": ["TEMPEST", "Side-channel Attack", "EM Security"]
+    },
+    {
+      "name": "Electromagnetic Compatibility",
+      "topics": ["Signal / Power Integrity Simulation"]
+    }
+  ],
+  "scholarships": [
+    { "period": "2022", "name": "ICOM Foundation" },
+    { "period": "2023 — 2026", "name": "EPCO Memorial Foundation" },
+    {
+      "period": "2023 — 2026",
+      "name": "Research Fellowships for Young Scientists in Japan (DC1)"
+    },
+    {
+      "period": "2024 — 2025",
+      "name": "JSPS Overseas Challenge Program for Young Researchers"
+    }
+  ],
+  "publicationsDescription": "Journal, International Conference, Domestic Workshop, Invited Lecture, Review Article, and Other.",
+  "links": [
+    {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.co.jp/citations?user=iDmgEs0AAAAJ&hl=ja"
+    },
+    {
+      "label": "IEEE Author Details",
+      "url": "https://ieeexplore.ieee.org/author/37088997455"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+    },
+    { "label": "X / Twitter", "url": "https://x.com/kitatike" },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@kitatike_naist"
+    },
+    { "label": "ISE Lab.", "url": "https://www.iselab.jp/index.html" }
+  ]
+}
